@@ -1,11 +1,11 @@
 List<int> arr = new List<int>(); 
-List<int> tmpArr = new List<int>(); 
+int j=0; 
 for (int i = 0; i<arr.Count; i++) 
 { 
-if (arr[i] > 100) 
+if (arr[i] <= 100) 
 { 
+arr[j] = arr[i]; 
+j++; 
 } 
-else 
-tmpArr.Add(arr[i]); 
 } 
-arr = tmpArr; 
+RemoveRange(j, arr.Count);
